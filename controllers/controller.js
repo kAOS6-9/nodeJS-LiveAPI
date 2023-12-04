@@ -1,6 +1,7 @@
 import dashboardSchema from '../models/schema.js'
 
 const getData = async (req, res) => {
+  res.header("Access-Control-Allow-Origin", "*")
   const { select, sort, end_year, intensity, sector, topic, insight, url, region, start_year, impact, added, published, country, relevance, pestle, source, title, likelihood } = req.query
   const queryObject = {}
 
